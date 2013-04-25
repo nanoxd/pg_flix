@@ -2,6 +2,8 @@
 
 <ul>
   <% @movies.each do |m| %>
-    <li><%= m %></li>
+    <li>
+      <strong><%= m.title %></strong> (<em><%= m.rating %></em>): <%= number_to_currency(m.total_gross) %>
+    </li>
   <% end %>
 </ul>
